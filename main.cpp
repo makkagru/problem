@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 #include <cmath>
 
 using namespace std;
@@ -18,8 +18,8 @@ int main() {
 }
 
 void inputData() {
-    cout << "Please enter coefficients\n";
-    cin >> a >> b >> c;
+    printf("Please enter coefficients\n");
+    scanf("%lf%lf%lf", &a, &b, &c);
 }
 
 void findRoot(double a, double b, double c) {
@@ -44,16 +44,16 @@ void findRoot(double a, double b, double c) {
 void printData() {
     switch (roots) {
         case 0:
-            cout << "This equality has no roots\n";
+            printf("This equality has no roots\n");
             break;
         case 1:
             if (isLiniar) {
-                cout << "It is liniar equality. ";    
+                printf("It is liniar equality. ");    
             }
-            cout << "Root of equality is " << x << '\n';
+            printf("Root of equality is %g\n", x);
             break;
         case 2:
-            cout << "Roots of equality are " << x << ' ' << y << '\n';
+            printf("Roots of equality are %g and %g\n", x, y);
             break;
     }
 
